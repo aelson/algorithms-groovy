@@ -17,10 +17,17 @@ class Util {
         println "------------------------------------"
     }
 
-    static void printArray(String arrayTitle, Product[] products) {
+    static void printProductsArray(String arrayTitle, Product[] products) {
         println arrayTitle
         products.each { product ->
             println "${product.name} costs ${product.price}"
+        }
+    }
+
+    static void printGradesArray(String arrayTitle, Grade[] grades) {
+        println arrayTitle
+        grades.each { grade ->
+            println "${grade.studentName} costs ${grade.result}"
         }
     }
 

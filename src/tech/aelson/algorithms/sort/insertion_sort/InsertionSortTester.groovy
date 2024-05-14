@@ -5,9 +5,9 @@ import tech.aelson.algorithms.util.Util
 class InsertionSortTester {
     static void main(String[] args) {
         def products = Util.getUnsortedProducts()
-        Util.printArray("Original array: ", products)
+        Util.printProductsArray("Original array: ", products)
 
         InsertionSort.execute(products)
-        Util.printArray("Sorted array: ", products)
+        Util.printProductsArray("Sorted array: ", products)
     }
 }
