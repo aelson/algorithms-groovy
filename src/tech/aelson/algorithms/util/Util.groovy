@@ -1,5 +1,6 @@
 package tech.aelson.algorithms.util
 
+import tech.aelson.algorithms.model.Grade
 import tech.aelson.algorithms.model.Product
 
 class Util {
