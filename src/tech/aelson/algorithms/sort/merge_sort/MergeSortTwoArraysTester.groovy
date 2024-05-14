@@ -22,7 +22,7 @@ class MergeSortTwoArraysTester {
         Util.printGradesArray("First array: ", firstArray)
         Util.printGradesArray("Second array: ", secondArray)
 
-        def rank = MergeSort.mergeTwoArrays(firstArray, secondArray)
+        Grade[] rank = MergeSort.mergeTwoArrays(firstArray, secondArray)
         Util.printGradesArray("Merged array: ", rank)
     }
 }

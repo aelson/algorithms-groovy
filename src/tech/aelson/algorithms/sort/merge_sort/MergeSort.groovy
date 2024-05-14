@@ -3,6 +3,16 @@ package tech.aelson.algorithms.sort.merge_sort
 import tech.aelson.algorithms.model.Grade
 
 class MergeSort {
+    static void mergeSort(Grade[] grades, int start, int end) {
+        def numberOfElements = end - start
+        if (numberOfElements > 1) {
+            int middle = (int) ((start + end) / 2)
+            mergeSort(grades, start, middle)
+            mergeSort(grades, middle, end)
+            sortOneArrayWithTwoOrderedHalf(grades, start, middle, end)
+        }
+    }
+
     static Grade[] mergeTwoArrays(Grade[] firstArray, Grade[] secondArray) {
         def total = firstArray.length + secondArray.length
         def merged = new Grade[total]
@@ -32,7 +42,7 @@ class MergeSort {
         return merged
     }
 
-    static Grade[] sortOneArray(Grade[] array, int start, int middle, int end) {
+    static sortOneArrayWithTwoOrderedHalf(Grade[] array, int start, int middle, int end) {
         def total = array.length
         def sorted = new Grade[total - start]
         def sortedIndex = 0
@@ -55,10 +65,7 @@ class MergeSort {
         }
         sortedIndex = addRemainingElementsToEndOfArray(array, middle, firstPartIndex, sorted, sortedIndex)
         addRemainingElementsToEndOfArray(array, end, secondPartIndex, sorted, sortedIndex)
-        if (start + end < array.length) {
-            rebuildArray(array, start, sortedIndex, sorted)
-        }
-        return array
+        rebuildArray(array, start, sortedIndex, sorted)
     }
 
     private static int addRemainingElementsToEndOfArray(Grade[] array, int arrayEnd, int arrayIndex, Grade[] merged, int mergedArrayIndex) {
