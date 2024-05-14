@@ -4,7 +4,7 @@ import tech.aelson.algorithms.model.Grade
 
 class MergeSort {
     static void mergeSort(Grade[] grades, int start, int end) {
-        def numberOfElements = end - start
+        int numberOfElements = end - start
         if (numberOfElements > 1) {
             int middle = (int) ((start + end) / 2)
             mergeSort(grades, start, middle)
@@ -14,14 +14,14 @@ class MergeSort {
     }
 
     static Grade[] mergeTwoArrays(Grade[] firstArray, Grade[] secondArray) {
-        def total = firstArray.length + secondArray.length
-        def merged = new Grade[total]
-        def currentOfFirstArray = 0
-        def currentOfSecondArray = 0
-        def currentOfMerged = 0
+        int total = firstArray.length + secondArray.length
+        Grade[] merged = new Grade[total]
+        int currentOfFirstArray = 0
+        int currentOfSecondArray = 0
+        int currentOfMerged = 0
         while (currentOfFirstArray < firstArray.length && currentOfSecondArray < secondArray.length) {
-            def grade1 = firstArray[currentOfFirstArray]
-            def grade2 = secondArray[currentOfSecondArray]
+            Grade grade1 = firstArray[currentOfFirstArray]
+            Grade grade2 = secondArray[currentOfSecondArray]
 
             println "Comparing ${grade1.studentName} (${grade1.result}) with ${grade2.studentName} (${grade2.result})"
 
@@ -43,11 +43,11 @@ class MergeSort {
     }
 
     static sortOneArrayWithTwoOrderedHalf(Grade[] array, int start, int middle, int end) {
-        def total = array.length
-        def sorted = new Grade[total - start]
-        def sortedIndex = 0
-        def firstPartIndex = start
-        def secondPartIndex = middle
+        int total = array.length
+        Grade[] sorted = new Grade[total - start]
+        int sortedIndex = 0
+        int firstPartIndex = start
+        int secondPartIndex = middle
         while (firstPartIndex < middle && secondPartIndex < end) {
             println "Comparing ${array[firstPartIndex].studentName} (${array[firstPartIndex].result}) with ${array[secondPartIndex].studentName} (${array[secondPartIndex].result})"
 
