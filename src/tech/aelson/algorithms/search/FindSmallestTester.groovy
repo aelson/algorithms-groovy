@@ -2,7 +2,7 @@ package tech.aelson.algorithms.search
 
 import tech.aelson.algorithms.model.Product
 
-class SearchSmallestTester {
+class FindSmallestTester {
     static void main(String[] args) {
         Product[] products = [
                 new Product("Tesla Model 3", 50000),
@@ -12,7 +12,7 @@ class SearchSmallestTester {
                 new Product("Audi Q5", 45000)
         ]
 
-        def smallest = SearchSmallest.execute(products, 0, 4)
+        def smallest = FindSmallest.execute(products, 0, 4)
         println smallest
         println "The car ${products[smallest].name} costs ${products[smallest].price}"
     }
