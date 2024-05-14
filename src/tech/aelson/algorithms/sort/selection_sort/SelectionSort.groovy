@@ -1,7 +1,7 @@
 package tech.aelson.algorithms.sort.selection_sort
 
 import tech.aelson.algorithms.model.Product
-import tech.aelson.algorithms.search.FindSmallest
+import tech.aelson.algorithms.search.find_smallest.FindSmallest
 import tech.aelson.algorithms.util.Util
 
 class SelectionSort {

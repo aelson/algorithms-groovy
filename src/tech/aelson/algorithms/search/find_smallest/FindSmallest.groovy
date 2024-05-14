@@ -1,4 +1,4 @@
-package tech.aelson.algorithms.search
+package tech.aelson.algorithms.search.find_smallest
 
 import tech.aelson.algorithms.model.Product
 
